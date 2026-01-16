@@ -11,9 +11,8 @@ import { useState, useEffect } from "react";
  */
 
 // Número de WhatsApp para contato
-const WHATSAPP_NUMBER = "5511980493204";
-const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Caldeiraria.";
-const WHATSAPP_MENSAGEM_CONTATO = "Olá! Gostaria de entrar em contato com a JVS Caldeiraria.";
+const WHATSAPP_NUMBER = "5511971087450";
+const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos da JVS Caldeiraria.";
 
 // Função para abrir WhatsApp
 const abrirWhatsApp = (mensagem: string) => {
