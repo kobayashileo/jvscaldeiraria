@@ -4,15 +4,16 @@ import { ArrowRight, Zap, Shield, Leaf, Cog, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 /**
- * Landing Page - JVS Caldeiraria
+ * Landing Page - JVS Calderaria
  * Design: Contemporary Tech / Futurismo Acessível
  * Tipografia: Clash Display (títulos) + Poppins (subtítulos) + Inter (corpo)
  * Cores: Gradiente azul petróleo → navy, acentos turquesa
  */
 
 // Número de WhatsApp para contato
-const WHATSAPP_NUMBER = "5511971087450";
-const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos da JVS Caldeiraria.";
+const WHATSAPP_NUMBER = "5511980493204";
+const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Calderaria.";
+const WHATSAPP_MENSAGEM_CONTATO = "Olá! Gostaria de entrar em contato com a JVS Calderaria.";
 
 // Função para abrir WhatsApp
 const abrirWhatsApp = (mensagem: string) => {
@@ -140,7 +141,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-12 w-auto" />
             <span className="hidden sm:inline font-semibold text-lg">
-              Caldeiraria
+              Calderaria
             </span>
           </div>
 
@@ -253,11 +254,11 @@ export default function Home() {
                 key={produto.id}
                 className="group bg-background rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="h-64 md:h-80 overflow-hidden bg-gradient-to-br from-teal-900 to-navy">
+                <div className="h-64 md:h-80 overflow-hidden bg-gradient-to-br from-teal-900 to-navy flex items-center justify-center p-4">
                   <img
                     src={produto.imagem}
                     alt={produto.nome}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="max-h-full max-w-full object-contain group-hover:scale-125 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 md:p-8">
@@ -270,7 +271,7 @@ export default function Home() {
                       const IconComponent = destaque.icon;
                       return (
                         <li key={idx} className="flex items-center gap-2">
-                          <IconComponent className="w-4 h-4" style={{ color: "oklch(0.85 0.005 65)" }} />
+                          <IconComponent className="w-4 h-4 text-accent" />
                           <span>{destaque.texto}</span>
                         </li>
                       );
@@ -341,12 +342,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Sobre a JVS Caldeiraria
+                Sobre a JVS Calderaria
               </h2>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
+                  <h3 className="text-xl font-semibold mb-2 text-accent">
                     Missão
                   </h3>
                   <p className="text-muted-foreground">
@@ -357,7 +358,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
+                  <h3 className="text-xl font-semibold mb-2 text-accent">
                     Visão
                   </h3>
                   <p className="text-muted-foreground">
@@ -369,24 +370,24 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
+                  <h3 className="text-xl font-semibold mb-2 text-accent">
                     Valores
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }} />
+                      <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <span>
                         Compromisso com qualidade e desempenho superior
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Leaf className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }} />
+                      <Leaf className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <span>
                         Sustentabilidade e responsabilidade ambiental
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Zap className="w-5 h-5flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }}/>
+                      <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <span>Inovação contínua e excelência operacional</span>
                     </li>
                   </ul>
@@ -400,7 +401,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 " style={{ color: "oklch(0.85 0.005 65)" }} />
+                    <Shield className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Qualidade Garantida</h4>
@@ -412,7 +413,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6" style={{ color: "oklch(0.85 0.005 65)" }} />
+                    <Zap className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Inovação Contínua</h4>
@@ -424,7 +425,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Leaf className="w-6 h-6" style={{ color: "oklch(0.85 0.005 65)" }} />
+                    <Leaf className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Sustentabilidade</h4>
@@ -436,7 +437,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Cog className="w-6 h-6" style={{ color: "oklch(0.85 0.005 65)" }} />
+                    <Cog className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Suporte Técnico</h4>
@@ -471,6 +472,14 @@ export default function Home() {
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-accent text-accent hover:bg-accent/10"
+              onClick={() => abrirWhatsApp(WHATSAPP_MENSAGEM_CONTATO)}
+            >
+              Fale Conosco
+            </Button>
           </div>
         </div>
       </section>
@@ -482,7 +491,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-10 w-auto" />
-                <span className="font-semibold">Caldeiraria</span>
+                <span className="font-semibold">Calderaria</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Materiais e máquinas que sustentam seus projetos
@@ -539,16 +548,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Email: comercial.jvs@outlook.com.br</li>
-                <li>Telefone: (12) 99715-4168 ou  (11) 97108-7450</li>
-                <li>Endereço: Rua Elias João Andraus Neto, n° 980- Una - Taubaté - SP</li>
+                <li>Email: contato@jvs.com.br</li>
+                <li>Telefone: (XX) XXXX-XXXX</li>
+                <li>Endereço: São Paulo, SP</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
             <p>
-              &copy; 2026 JVS Caldeiraria. Todos os direitos reservados.
+              &copy; 2026 JVS Calderaria. Todos os direitos reservados.
             </p>
           </div>
         </div>
