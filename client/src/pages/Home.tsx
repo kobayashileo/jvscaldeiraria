@@ -4,16 +4,16 @@ import { ArrowRight, Zap, Shield, Leaf, Cog, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 /**
- * Landing Page - JVS Calderaria
+ * Landing Page - JVS Caldeiraria
  * Design: Contemporary Tech / Futurismo Acessível
  * Tipografia: Clash Display (títulos) + Poppins (subtítulos) + Inter (corpo)
  * Cores: Gradiente azul petróleo → navy, acentos turquesa
  */
 
 // Número de WhatsApp para contato
-const WHATSAPP_NUMBER = "5511980493204";
-const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Calderaria.";
-const WHATSAPP_MENSAGEM_CONTATO = "Olá! Gostaria de entrar em contato com a JVS Calderaria.";
+const WHATSAPP_NUMBER = "5511971087450";
+const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Caldeiraria.";
+const WHATSAPP_MENSAGEM_CONTATO = "Olá! Gostaria de entrar em contato com a JVS Caldeiraria.";
 
 // Função para abrir WhatsApp
 const abrirWhatsApp = (mensagem: string) => {
@@ -141,7 +141,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-12 w-auto" />
             <span className="hidden sm:inline font-semibold text-lg">
-              Calderaria
+              Caldeiraria
             </span>
           </div>
 
@@ -271,7 +271,7 @@ export default function Home() {
                       const IconComponent = destaque.icon;
                       return (
                         <li key={idx} className="flex items-center gap-2">
-                          <IconComponent className="w-4 h-4 text-accent" />
+                          <IconComponent className="w-4 h-4" style={{ color: "oklch(0.85 0.005 65)" }}/>
                           <span>{destaque.texto}</span>
                         </li>
                       );
@@ -342,12 +342,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Sobre a JVS Calderaria
+                Sobre a JVS Caldeiraria
               </h2>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-accent">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
                     Missão
                   </h3>
                   <p className="text-muted-foreground">
@@ -358,7 +358,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-accent">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
                     Visão
                   </h3>
                   <p className="text-muted-foreground">
@@ -370,24 +370,24 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-accent">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: "oklch(0.705 0.015 286.067)" }}>
                     Valores
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Shield className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }}/>
                       <span>
                         Compromisso com qualidade e desempenho superior
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Leaf className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Leaf className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                       <span>
                         Sustentabilidade e responsabilidade ambiental
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <li className="flex items-start gap-3" style={{ color: "oklch(0.705 0.015 286.067)" }}>
+                      <Zap className="w-5 h-5 flex-shrink-0 mt-0.5"/>
                       <span>Inovação contínua e excelência operacional</span>
                     </li>
                   </ul>
@@ -401,7 +401,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-accent" />
+                    <Shield className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Qualidade Garantida</h4>
@@ -413,7 +413,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6 text-accent" />
+                    <Zap className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Inovação Contínua</h4>
@@ -425,7 +425,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Leaf className="w-6 h-6 text-accent" />
+                    <Leaf className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }}/>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Sustentabilidade</h4>
@@ -437,7 +437,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Cog className="w-6 h-6 text-accent" />
+                    <Cog className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Suporte Técnico</h4>
@@ -472,14 +472,6 @@ export default function Home() {
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-accent text-accent hover:bg-accent/10"
-              onClick={() => abrirWhatsApp(WHATSAPP_MENSAGEM_CONTATO)}
-            >
-              Fale Conosco
-            </Button>
           </div>
         </div>
       </section>
@@ -491,7 +483,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-10 w-auto" />
-                <span className="font-semibold">Calderaria</span>
+                <span className="font-semibold">Caldeiraria</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Materiais e máquinas que sustentam seus projetos
@@ -548,16 +540,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Email: contato@jvs.com.br</li>
-                <li>Telefone: (XX) XXXX-XXXX</li>
-                <li>Endereço: São Paulo, SP</li>
+                <li>Email: comercial.jvs@outlook.com.br</li>
+                <li>Telefone: (11) 97108-7450</li>
+                <li>Endereço:  Rua Elias João Andraus Neto, n° 980, Una, Taubaté - SP</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
             <p>
-              &copy; 2026 JVS Calderaria. Todos os direitos reservados.
+              &copy; 2026 JVS Caldeiraria. Todos os direitos reservados.
             </p>
           </div>
         </div>
