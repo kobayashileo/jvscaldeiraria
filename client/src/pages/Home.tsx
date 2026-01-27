@@ -44,7 +44,7 @@ const produtos = [
     destaques: [
       { icon: Shield, texto: "Resistência ao rasgo: 25 kgf" },
       { icon: Zap, texto: "Anti-chama e autoextinguível" },
-      { icon: Cog, texto: "Gramatura: 450gr/m²" },
+      { icon: Cog, texto: "Gramatura: 450gr/m²"},
     ],
   },
   {
