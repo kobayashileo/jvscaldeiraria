@@ -4,7 +4,7 @@ import { ArrowRight, Zap, Shield, Leaf, Cog, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 /**
- * Landing Page - JVS Caldeiraria
+ * Landing Page - JVS Calderaria
  * Design: Contemporary Tech / Futurismo Acessível
  * Tipografia: Clash Display (títulos) + Poppins (subtítulos) + Inter (corpo)
  * Cores: Gradiente azul petróleo → navy, acentos turquesa
@@ -12,8 +12,7 @@ import { useState, useEffect } from "react";
 
 // Número de WhatsApp para contato
 const WHATSAPP_NUMBER = "5511971087450";
-const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Caldeiraria.";
-const WHATSAPP_MENSAGEM_CONTATO = "Olá! Gostaria de entrar em contato com a JVS Caldeiraria.";
+const WHATSAPP_MENSAGEM_ORCAMENTO = "Olá! Gostaria de solicitar um orçamento para os produtos JVS Calderaria.";
 
 // Função para abrir WhatsApp
 const abrirWhatsApp = (mensagem: string) => {
@@ -44,7 +43,7 @@ const produtos = [
     destaques: [
       { icon: Shield, texto: "Resistência ao rasgo: 25 kgf" },
       { icon: Zap, texto: "Anti-chama e autoextinguível" },
-      { icon: Cog, texto: "Gramatura: 450gr/m²"},
+      { icon: Cog, texto: "Gramatura: 450gr/m²" },
     ],
   },
   {
@@ -110,6 +109,33 @@ const produtos = [
       { icon: Cog, texto: "Alta usinabilidade" },
     ],
   },
+  {
+    id: "and500",
+    nome: "AND 500",
+    descricao: "Tecido para-aramida cardado de alta performance térmica",
+    imagem: "/images/product-and500.png",
+    especificacoes: [
+      { label: "Construção", valor: "Tela 1x1" },
+      { label: "Urdume", valor: "Filamento 100% Para-Aramida" },
+      { label: "Trama", valor: "Fio Misto Para-Aramida/Fibra de vidro" },
+      { label: "Largura Nominal", valor: "1.20m +/- 1mm" },
+      { label: "Comprimento Padrão", valor: "25m" },
+      { label: "Espessura Nominal", valor: "1.5mm +/- 0.2mm" },
+      { label: "Gramatura Nominal", valor: "0.600kg p/m² +/- 5%" },
+      { label: "Resistência à Tração (Urdume)", valor: "253 kgf/cm" },
+      { label: "Resistência à Tração (Trama)", valor: "119 kgf/cm" },
+      { label: "Resistência à Temperatura (Uso Contínuo)", valor: "280°C" },
+      { label: "Resistência à Temperatura (Uso Controlado)", valor: "400°C" },
+      { label: "Material Isolante", valor: "Poliéster/Algodão" },
+      { label: "Tratamento Antichama", valor: "Sim" },
+      { label: "Compatibilidade", valor: "Silicones, colas diversas e tintas isolantes" },
+    ],
+    destaques: [
+      { icon: Shield, texto: "Excelente isolação térmica" },
+      { icon: Zap, texto: "Resistência até 400°C controlado" },
+      { icon: Leaf, texto: "Tratamento antichama integrado" },
+    ],
+  },
 ];
 
 export default function Home() {
@@ -141,7 +167,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-12 w-auto" />
             <span className="hidden sm:inline font-semibold text-lg">
-              Caldeiraria
+              Calderaria
             </span>
           </div>
 
@@ -191,7 +217,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/images/hero-bg.png')",
+            backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663116406043/XnisrBsiWCTYVZpS.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -258,7 +284,7 @@ export default function Home() {
                   <img
                     src={produto.imagem}
                     alt={produto.nome}
-                    className="max-h-full max-w-full object-contain group-hover:scale-125 transition-transform duration-500"
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 md:p-8">
@@ -271,7 +297,7 @@ export default function Home() {
                       const IconComponent = destaque.icon;
                       return (
                         <li key={idx} className="flex items-center gap-2">
-                          <IconComponent className="w-4 h-4" style={{ color: "oklch(0.85 0.005 65)" }}/>
+                          <IconComponent className="w-4 h-4" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                           <span>{destaque.texto}</span>
                         </li>
                       );
@@ -341,8 +367,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Sobre a JVS Caldeiraria
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "oklch(0.705 0.015 286.067)" }}>
+                Sobre a JVS Calderaria
               </h2>
 
               <div className="space-y-6">
@@ -375,7 +401,7 @@ export default function Home() {
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }}/>
+                      <Shield className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                       <span>
                         Compromisso com qualidade e desempenho superior
                       </span>
@@ -386,8 +412,8 @@ export default function Home() {
                         Sustentabilidade e responsabilidade ambiental
                       </span>
                     </li>
-                    <li className="flex items-start gap-3" style={{ color: "oklch(0.705 0.015 286.067)" }}>
-                      <Zap className="w-5 h-5 flex-shrink-0 mt-0.5"/>
+                    <li className="flex items-start gap-3">
+                      <Zap className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                       <span>Inovação contínua e excelência operacional</span>
                     </li>
                   </ul>
@@ -396,7 +422,7 @@ export default function Home() {
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/20 to-navy/20 rounded-xl p-8 border border-accent/20">
-              <h3 className="text-2xl font-bold mb-6">Por que escolher JVS?</h3>
+              <h3 className="text-2xl font-bold mb-6" style={{ color: "oklch(0.705 0.015 286.067)" }}>Por que escolher JVS?</h3>
 
               <div className="space-y-4">
                 <div className="flex gap-4">
@@ -425,7 +451,7 @@ export default function Home() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Leaf className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }}/>
+                    <Leaf className="w-6 h-6" style={{ color: "oklch(0.705 0.015 286.067)" }} />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Sustentabilidade</h4>
@@ -483,7 +509,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/logo-jvs.png" alt="JVS Logo" className="h-10 w-auto" />
-                <span className="font-semibold">Caldeiraria</span>
+                <span className="font-semibold">Calderaria</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Materiais e máquinas que sustentam seus projetos
@@ -513,6 +539,11 @@ export default function Home() {
                     JVS Power
                   </a>
                 </li>
+                <li>
+                  <a href="#" className="hover:text-accent transition-colors">
+                    JVS AND
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -540,16 +571,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Email: comercial.jvs@outlook.com.br</li>
+                <li>Email: comercial.jvs@outlook.com.br </li>
                 <li>Telefone: (11) 97108-7450</li>
-                <li>Endereço:  Rua Elias João Andraus Neto, n° 980, Una, Taubaté - SP</li>
+                <li>Endereço: Rua Elias João Andraus Neto, n° 980, Una, Taubaté - SP</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
             <p>
-              &copy; 2026 JVS Caldeiraria. Todos os direitos reservados.
+              &copy; 2026 JVS Calderaria. Todos os direitos reservados.
             </p>
           </div>
         </div>
