@@ -110,10 +110,10 @@ const produtos = [
     ],
   },
   {
-    id: "and500",
-    nome: "AND 500",
+    id: "curtain",
+    nome: "JVS Curtain",
     descricao: "Tecido para-aramida cardado de alta performance térmica",
-    imagem: "/images/product-and500.png",
+    imagem: "/images/product-curtain.png",
     especificacoes: [
       { label: "Construção", valor: "Tela 1x1" },
       { label: "Urdume", valor: "Filamento 100% Para-Aramida" },
@@ -541,7 +541,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-accent transition-colors">
-                    JVS AND
+                    JVS Curtain
                   </a>
                 </li>
               </ul>
